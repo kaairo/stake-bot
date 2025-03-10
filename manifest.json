@@ -1,0 +1,28 @@
+{
+	"manifest_version": 3,
+	"name": "Stake Bot",
+	"version": "1.0",
+	"description": "Bot for sports betting on the Stake.com site",
+	"permissions": [
+		"storage",
+		"activeTab",
+		"scripting"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://stake.com/*"
+			],
+			"js": [
+				"script.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"icons": {
+		"128": "logo.png"
+	},
+	"action": {
+		"default_popup": "popup.html"
+	}
+}
